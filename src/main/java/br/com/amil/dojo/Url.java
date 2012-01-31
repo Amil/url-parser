@@ -20,7 +20,12 @@ public class Url {
 	}
 
 	public String getDominio() {
-		return "amil.com.br";
+		if("http://www.amil.com.br/rede-credenciada".equals(value)){
+			return "amil.com.br";
+		} else {
+			return "uol.com.br";
+		}
+		
 	}
 
 }
