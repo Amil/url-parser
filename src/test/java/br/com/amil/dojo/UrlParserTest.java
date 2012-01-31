@@ -12,7 +12,8 @@ public class UrlParserTest {
 		Assert.assertEquals("amil.com.br", new Url("http://www.amil.com.br/rede-credenciada").getDominio());
 		Assert.assertEquals("/rede", new Url("http://www.amil.com.br/rede").getPath());
 		Assert.assertNull(new Url("http://www.amil.com.br").getPath());
-
+		Assert.assertEquals("/",new Url("http://www.amil.com.br/").getPath());
+		
 	}	
 	
 }
