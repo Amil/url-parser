@@ -9,6 +9,5 @@ public class UrlParserTest {
 	@Test
 	public void parserUrl() {
 		Assert.assertEquals("http", new Url("http://ww.amil.com.br/rede-credenciada").getProtocolo());
-	}
-	
+	}	
 }
