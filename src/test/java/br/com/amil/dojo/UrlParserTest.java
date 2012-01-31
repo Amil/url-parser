@@ -13,6 +13,8 @@ public class UrlParserTest {
 		Assert.assertEquals("/rede", new Url("http://www.amil.com.br/rede").getPath());
 		Assert.assertNull(new Url("http://www.amil.com.br").getPath());
 		Assert.assertEquals("/",new Url("http://www.amil.com.br/").getPath());
+		Assert.assertEquals("/rede/sp", new Url("http://www.amil.com.br/rede/sp").getPath());
+
 		
 	}	
 	
