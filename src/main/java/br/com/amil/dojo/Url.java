@@ -16,9 +16,9 @@ public class Url {
 	}
 
 	private void parse() {
-		this.protocolo = value.split(":")[0]; 
 		Matcher matcher = Pattern.compile("(.+)://(www\\.)?(.+)/(.+)").matcher(value);
 		if (matcher.matches()) {
+			protocolo = matcher.group(1);
 			dominio = matcher.group(3);
 		}
 	}
