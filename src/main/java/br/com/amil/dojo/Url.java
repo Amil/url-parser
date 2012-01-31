@@ -19,4 +19,8 @@ public class Url {
 		return protocolo;
 	}
 
+	public String getDominio() {
+		return "amil.com.br";
+	}
+
 }
