@@ -9,6 +9,8 @@ public class Url {
 	
 	private String protocolo;
 	private String dominio;
+
+	private String path;
 	
 	public Url(String url) {
 		this.value = url;
@@ -20,6 +22,7 @@ public class Url {
 		if (matcher.matches()) {
 			protocolo = matcher.group(1);
 			dominio = matcher.group(3);
+			path = matcher.group(4);
 		}
 	}
 	
@@ -29,6 +32,10 @@ public class Url {
 
 	public String getDominio() {
 		return dominio;
+	}
+
+	public String getPath() {
+		return path;
 	}
 
 }

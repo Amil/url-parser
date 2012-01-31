@@ -10,6 +10,9 @@ public class UrlParserTest {
 	public void parserUrl() {
 		Assert.assertEquals("http", new Url("http://ww.amil.com.br/rede-credenciada").getProtocolo());
 		Assert.assertEquals("amil.com.br", new Url("http://www.amil.com.br/rede-credenciada").getDominio());
+		Assert.assertEquals("rede-credenciada", new Url("http://www.amil.com.br/rede-credenciada").getPath());
+		Assert.assertEquals("rede", new Url("http://www.amil.com.br/rede").getPath());
+
 	}	
 	
 }
