@@ -5,6 +5,8 @@ import java.util.regex.Pattern;
 
 public class Url {
 
+	private static final Pattern URL_PATTERN = Pattern.compile("(.+)://(www\\.)?(.+?)(/.*)");
+
 	private String value;
 	
 	private String protocolo;
@@ -18,7 +20,7 @@ public class Url {
 	}
 
 	private void parse() {
-		Matcher matcher = Pattern.compile("(.+)://(www\\.)?(.+?)(/.*)").matcher(value);
+		Matcher matcher = URL_PATTERN.matcher(value);
 		if (matcher.matches()) {
 			protocolo = matcher.group(1);
 			dominio = matcher.group(3);
